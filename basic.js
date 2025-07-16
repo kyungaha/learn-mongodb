@@ -60,5 +60,37 @@ const double =(num = 1) => {
 console.log("🚀 ~ double1:", double());
 console.log("🚀 ~ double2:", double(2));
 
-// 삼항연산자
+// 삼항연산자 : 실행구문이 하나인 경우에 사용가능
+ console.log(isAccessAdminPage ? "✅관리자 페이지에 접근하실 수 있습니다." : "❌관리자 페이지에 접근하실 수 없습니다.");
+ //score 값이 60점 이상이면 합격
+ const score = 50;
+ const result = score >= 60 ? "합격" : "탈락";
+ console.log("🚀 ~ result:", result);
+  
 // spread syntax
+// 배열이나 객체를 개별요소로 분해하거나 결합할 때 사용하는 문법 : 보통은 결합할때 사용
+const copyArr = [...animals, "value"];
+console.log("animals", animals);
+console.log("copyArr", copyArr);
+
+const todoItem = {
+    id: 1,
+    content: "React공부하기"
+}
+const newItem = {
+    ...todoItem,
+    isComplete: false,
+    content: "MongoDB 공부하기" // 기존에 존재하지 않는 키값은 추가, 기존에 존재하는 키값은 수정
+}
+console.log("🚀 ~ todoItem:", todoItem)
+console.log("🚀 ~ newItem:", newItem)
+
+// Javascript 에서 false로 간주 되는 것
+// 숫자 0 
+// string ""
+// null
+// undefined
+
+if (!"") {
+    //사용자 입력 값이 없는 경우
+}
